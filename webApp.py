@@ -34,7 +34,7 @@ class SMS:
         message = "I'm a lumberjack and it's ok, I sleep all night and I work all day";
 
         # Set your shortCode or senderId
-        sender = "shortCode or senderId"
+        sender = "14262"
         try:
             # Thats it, hit send and we'll take care of the rest.
             response = self.sms.send(message, recipients, sender)
