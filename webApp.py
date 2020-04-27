@@ -1,7 +1,7 @@
 from __future__ import print_function
 
 from flask import Flask, request
-from flask_restful import Api
+from flask_restful import Api, Resource
 
 import africastalking
 
@@ -11,6 +11,29 @@ api = Api(app)
 # Create your credentials
 username = "sandbox"
 apikey = "6f0e59d192c4940953563de43826d9e9a91528400b70b06fad714d7f99337734"
+
+# Initialize the SDK
+africastalking.initialize(username, apikey)
+
+# Get the SMS service
+sms = africastalking.SMS
+
+# # Define some options that we will use to send the SMS
+# recipients = ['+256702431725', '+256775097505']
+# message = 'I\'m a lumberjack and its ok, I sleep all night and I work all day'
+# sender = '14262'
+
+
+class SendSms(Resource):
+    def get(self):
+        return {'hello': 'world'}
+
+    def post(self):
+        number = str(request.form['+256702431725'])
+        return sms.send("Test message", [number])
+
+
+api.add_resource(SendSms, '/sms')
 
 @app.route("/", methods=['GET', 'POST'])
 def ussd():
@@ -37,24 +60,7 @@ def ussd():
         response += "3. 2020.04.04 Fortune Oil "
 
     elif text == '3':
-        # Send the SMS
-        try:
-            # Initialize the SDK
-            africastalking.initialize(username, apikey)
-
-            # Get the SMS service
-            sms = africastalking.SMS
-
-            # Define some options that we will use to send the SMS
-            recipients = ['+256702431725', '+256775097505']
-            message = 'I\'m a lumberjack and its ok, I sleep all night and I work all day'
-            sender = '14262'
-            # Once this is done, that's it! We'll handle the rest
-            response = "END " + sms.send(message, recipients, sender)
-            print(response)
-        except Exception as e:
-            print(f" END Houston, we have a problem {e}")
-            response = "END Houston, we have a problem"
+       response = "END SOME"
 
 
     elif text == '1*1':

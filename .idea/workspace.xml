@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="64420c38-2d43-4459-a20a-0c3f655fe165" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webApp.py" beforeDir="false" afterPath="$PROJECT_DIR$/webApp.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +21,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webApp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="64" column="34" lean-forward="true" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+            <state relative-caret-position="287">
+              <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -32,7 +33,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/africastalking/SMS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-357" />
+            <state relative-caret-position="-1600" />
           </provider>
         </entry>
       </file>
@@ -156,7 +157,7 @@
       <workItem from="1587732962119" duration="1254000" />
       <workItem from="1587735146649" duration="128000" />
       <workItem from="1587969030756" duration="1146000" />
-      <workItem from="1587974937970" duration="6767000" />
+      <workItem from="1587974937970" duration="8706000" />
     </task>
     <task id="LOCAL-00001" summary="integrating sms into ussd">
       <created>1587975496746</created>
@@ -214,11 +215,25 @@
       <option name="project" value="LOCAL" />
       <updated>1587982148037</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="integrating sms into ussd">
+      <created>1587982155905</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1587982155905</updated>
+    </task>
+    <task id="LOCAL-00010" summary="integrating sms into ussd">
+      <created>1587983053825</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1587983053825</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9295000" />
+    <option name="totallyTimeSpent" value="11234000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
@@ -255,7 +270,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="integrating sms into ussd" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/africastalking_python$africastalking_python.coverage" NAME="africastalking-python Coverage Results" MODIFIED="1587982125036" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/africastalking_python$africastalking_python.coverage" NAME="africastalking-python Coverage Results" MODIFIED="1587984163045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/wsgi.py">
@@ -278,13 +293,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/africastalking/SMS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357" />
+        <state relative-caret-position="-1600" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webApp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="64" column="34" lean-forward="true" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+        <state relative-caret-position="287">
+          <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
