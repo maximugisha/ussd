@@ -1,39 +1,42 @@
 from __future__ import print_function
 
 from flask import Flask, request
-from flask_restful import Api, Resource
+from flask_restful import Api
 
 import africastalking
 
 app = Flask(__name__)
 api = Api(app)
 
-# Create your credentials
-username = "sandbox"
-apikey = "6f0e59d192c4940953563de43826d9e9a91528400b70b06fad714d7f99337734"
 
-# Initialize the SDK
-africastalking.initialize(username, apikey)
+class SMS:
+    # Set your app credentials
+    username = "sandbox"
 
-# Get the SMS service
-sms = africastalking.SMS
+    api_key = "6f0e59d192c4940953563de43826d9e9a91528400b70b06fad714d7f99337734"
 
-# # Define some options that we will use to send the SMS
-# recipients = ['+256702431725', '+256775097505']
-# message = 'I\'m a lumberjack and its ok, I sleep all night and I work all day'
-# sender = '14262'
+    # Initialize the SDK
+    africastalking.initialize(username, api_key)
 
+    # Get the SMS service
+    sms = africastalking.SMS
 
-class SendSms(Resource):
-    def get(self):
-        return {'hello': 'world'}
+    def send(self):
+        # Set the numbers you want to send to in international format
+        recipients = ["14262", "+256702431725"]
 
-    def post(self):
-        number = str(request.form['+256702431725'])
-        return sms.send("Test message", [number])
+        # Set your message
+        message = "I'm a lumberjack and it's ok, I sleep all night and I work all day";
 
+        # Set your shortCode or senderId
+        sender = "14262"
+        try:
+            # Thats it, hit send and we'll take care of the rest.
+            response = self.sms.send(message, recipients, sender)
+            print(response)
+        except Exception as e:
+            print('Encountered an error while sending: %s' % str(e))
 
-api.add_resource(SendSms, '/sms')
 
 @app.route("/", methods=['GET', 'POST'])
 def ussd():
@@ -60,8 +63,10 @@ def ussd():
         response += "3. 2020.04.04 Fortune Oil "
 
     elif text == '3':
-       response = "END SOME"
-
+        if SMS().send():
+            response = "END SOME" + phone_number
+        else:
+            response = "END Encountered an error while sending"
 
     elif text == '1*1':
         shop_number = "ACC1001"
