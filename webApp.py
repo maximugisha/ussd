@@ -31,7 +31,7 @@ def ussd():
         response += "2. My Phone Number"
 
     elif text == '2':
-        response = "Your Latest Transactions \n "
+        response = " CON Your Latest Transactions \n "
         response += "1. 2020.04.04 Bidco Oil \n"
         response += "2. 2020.04.04 Akawunga  \n"
         response += "3. 2020.04.04 Fortune Oil "
@@ -46,9 +46,9 @@ def ussd():
             sms = africastalking.SMS
 
             # Define some options that we will use to send the SMS
-            recipients = ['14262']
+            recipients = ['+256702431725', '+256775097505']
             message = 'I\'m a lumberjack and its ok, I sleep all night and I work all day'
-            sender = '+256702431725'
+            sender = '14262'
             # Once this is done, that's it! We'll handle the rest
             response = "END " + sms.send(message, recipients, sender)
             print(response)
