@@ -67,8 +67,10 @@ def ussd():
         response = "END Your phone number is " + phone_number
 
     elif text == '3':
-        SMS.send
-        response = "END SMS Received"
+        if SMS.send:
+            response = "END SMS Received"
+        else:
+            response = "END FAILED"
 
     elif text == '1*1':
         accountNumber = "ACC1001"

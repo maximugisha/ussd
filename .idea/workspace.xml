@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64420c38-2d43-4459-a20a-0c3f655fe165" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/webApp.py" beforeDir="false" afterPath="$PROJECT_DIR$/webApp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webApp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="70" column="37" lean-forward="true" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="37" />
+            <state relative-caret-position="766">
+              <caret line="68" column="21" lean-forward="true" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="21" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -66,8 +66,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="792" />
-    <option name="y" value="-8" />
+    <option name="x" value="563" />
+    <option name="y" value="25" />
     <option name="width" value="816" />
     <option name="height" value="886" />
   </component>
@@ -82,6 +82,11 @@
             <path>
               <item name="africastalking-python" type="b2602c69:ProjectViewProjectNode" />
               <item name="africastalking-python" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="africastalking-python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="africastalking-python" type="462c0819:PsiDirectoryNode" />
+              <item name="africastalking" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -138,15 +143,30 @@
       <workItem from="1587732962119" duration="1254000" />
       <workItem from="1587735146649" duration="128000" />
       <workItem from="1587969030756" duration="1146000" />
-      <workItem from="1587974937970" duration="397000" />
+      <workItem from="1587974937970" duration="1233000" />
     </task>
+    <task id="LOCAL-00001" summary="integrating sms into ussd">
+      <created>1587975496746</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587975496746</updated>
+    </task>
+    <task id="LOCAL-00002" summary="integrating sms into ussd">
+      <created>1587975567694</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1587975567694</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2925000" />
+    <option name="totallyTimeSpent" value="3761000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="792" y="-8" width="816" height="886" extended-state="0" />
+    <frame x="563" y="25" width="816" height="886" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25396827" />
@@ -175,6 +195,10 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="integrating sms into ussd" />
+    <option name="LAST_COMMIT_MESSAGE" value="integrating sms into ussd" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/africastalking_python$africastalking_python.coverage" NAME="africastalking-python Coverage Results" MODIFIED="1587975402588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
@@ -194,8 +218,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webApp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="70" column="37" lean-forward="true" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="37" />
+        <state relative-caret-position="766">
+          <caret line="68" column="21" lean-forward="true" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="21" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
