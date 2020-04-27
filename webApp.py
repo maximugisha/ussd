@@ -19,7 +19,7 @@ africastalking.initialize(username, apikey)
 sms = africastalking.SMS
 
 # Define some options that we will use to send the SMS
-recipients = ['YOUR_PHONE_NUMBER_GOES_HERE']
+recipients = ['+256702431725']
 message = 'I\'m a lumberjack and its ok, I sleep all night and I work all day'
 sender = '14262'
 
@@ -49,10 +49,11 @@ def ussd():
         # Send the SMS
         try:
             # Once this is done, that's it! We'll handle the rest
-            response = sms.send(message, recipients, sender)
+            response = "END " + sms.send(message, recipients, sender)
             print(response)
         except Exception as e:
-            print(f"Houston, we have a problem {e}")
+            print(f" END Houston, we have a problem {e}")
+            response = "END Houston, we have a problem"
 
 
     elif text == '1*1':
