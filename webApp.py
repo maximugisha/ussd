@@ -8,38 +8,39 @@ import africastalking
 app = Flask(__name__)
 api = Api(app)
 
+# Create your credentials
+username = "sandbox"
+apikey = "1578499043ae12ca0f0a9e00070d4ac9cde89ce0a36ee5d7f87bb47011a671ae"
 
-class SMS:
-    # Set your app credentials
-    username = "sandbox"
+# Initialize the SDK
+africastalking.initialize(username, apikey)
 
-    api_key = "6f0e59d192c4940953563de43826d9e9a91528400b70b06fad714d7f99337734"
+# Get the SMS service
+sms = africastalking.SMS
 
-    # Initialize the SDK
-    africastalking.initialize(username, api_key)
 
-    # Get the SMS service
-    sms = africastalking.SMS
 
-    def send(self):
-        # Set the numbers you want to send to in international format
-        recipients = ["14262", "+256702431725"]
+@app.route('/sms', methods=['GET', 'POST'])
+def sendsms():
+    response = ''
+    # Define some options that we will use to send the SMS
+    recipients = ['+256702431725', '+256775097505']
+    message = 'I want to make an order'
+    sender = '14262'
 
-        # Set your message
-        message = "I'm a lumberjack and it's ok, I sleep all night and I work all day";
-
-        # Set your shortCode or senderId
-        sender = "14262"
-        try:
-            # Thats it, hit send and we'll take care of the rest.
-            response = self.sms.send(message, recipients, sender)
-            print(response)
-        except Exception as e:
-            print('Encountered an error while sending: %s' % str(e))
+    # Send the SMS
+    try:
+        # Once this is done, that's it! We'll handle the rest
+        response = sms.send(message, recipients, sender)
+        print(response)
+    except Exception as e:
+        print(f"Houston, we have a problem {e}")
+    return response
 
 
 @app.route("/", methods=['GET', 'POST'])
 def ussd():
+    response = ''
     session_id = request.values.get("sessionId", None)
     serviceCode = request.values.get("serviceCode", None)
     phone_number = request.values.get("phoneNumber", None)
@@ -63,10 +64,8 @@ def ussd():
         response += "3. 2020.04.04 Fortune Oil "
 
     elif text == '3':
-        if SMS().send():
-            response = "END SOME" + phone_number
-        else:
-            response = "END Encountered an error while sending"
+        sendsms()
+        response = "END Your Request to order has been received"
 
     elif text == '1*1':
         shop_number = "ACC1001"
