@@ -24,7 +24,7 @@ sms = africastalking.SMS
 def sendsms():
     response = ''
     # Define some options that we will use to send the SMS
-    recipients = ['+256702431725', '+256775097505']
+    recipients = ['+256702431725', '+256775097505', '+815054351311']
     message = 'I want to make an order'
     sender = '14262'
 
